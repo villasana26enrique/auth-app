@@ -17,10 +17,10 @@
             </li>
         </ul>
         <span class="navbar-text">
-            <button *ngIf="!auth.loggedIn" class="btn btn-outline-primary mr-1">
+            <button *ngIf="!auth.loggedIn" (click)="auth.login()" class="btn btn-outline-primary mr-1">
                 Ingresar
             </button>
-            <button *ngIf="auth.loggedIn" class="btn btn-outline-danger">
+            <button *ngIf="auth.loggedIn" (click)="auth.logout()" class="btn btn-outline-danger">
                 Salir
             </button>
         </span>
