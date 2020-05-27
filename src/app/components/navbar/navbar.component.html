@@ -16,6 +16,13 @@
                 <a class="nav-link" [routerLink]="['protegida']">Protegida</a>
             </li>
         </ul>
-        <span>Navbar Text</span>
+        <span class="navbar-text">
+            <button *ngIf="!auth.loggedIn" class="btn btn-outline-primary mr-1">
+                Ingresar
+            </button>
+            <button *ngIf="auth.loggedIn" class="btn btn-outline-danger">
+                Salir
+            </button>
+        </span>
     </div>
 </nav>
