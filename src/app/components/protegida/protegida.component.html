@@ -1,1 +1,9 @@
-<p>protegida works!</p>
+<h1 class="mt-1">Perfil del Usuario</h1>
+<hr>
+<!-- De esta manera se obtiene la información del Usuario Logueado desde el HTML 
+    Con un IF que pregunta si existe el observable "userProfile$" utilizamos
+    el pipe "async" ya que al ser un observable debemos esperar la respuesta y
+    luego se muestra la información -->
+<pre *ngIf="auth.userProfile$ | async as profile">
+    <code>{{ profile | json }}</code>
+</pre>
